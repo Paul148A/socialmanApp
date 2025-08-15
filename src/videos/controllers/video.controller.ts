@@ -23,6 +23,11 @@ export class VideosController {
     return this.videosService.uploadVideo(file);
   }
 
+  @Get('published')
+  async findPublishedVideos() {
+    return this.videosService.getPublishedVideos();
+  }
+
   @Get('uploaded')
   getUploadedVideos() {
     return this.videosService.getUploadedVideos();
